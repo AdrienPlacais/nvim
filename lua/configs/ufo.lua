@@ -54,9 +54,18 @@ require('ufo').setup({
 -- Preview folded
 vim.keymap.set('n', 'zP', require('ufo').peekFoldedLinesUnderCursor)
 
+local ftMap = {
+   vim = 'indent',
+   python = { 'syntax', 'indent' },
+}
+
 require('ufo').setup({
-   -- provider_selector = function(bufnr, filetype, buftype)
-   --    return { 'lsp', 'indent' }
-   -- end,
-   close_fold_kinds_for_python = { 'comment', 'imports' },
-})
+   provider_selector = function(bufnr, filetype, buftype)
+      return ftMap[filetype]
+   end,
+   close_fold_kinds_for_ft = {
+      default = { 'comment', 'imports' },
+      python = { 'comment', 'imports' },
+   }
+}
+)
