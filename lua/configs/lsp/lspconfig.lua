@@ -60,19 +60,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 --
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
---
--- Change the Diagnostic symbols in the sign column (gutter)
--- (not in youtube nvim video)
-local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-for type, icon in pairs(signs) do
-   local hl = "DiagnosticSign" .. type
-   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
 
-lspconfig['pyright'].setup({
-   capabilities=capabilities,
-   on_attach=on_attach,
-})
 lspconfig["lua_ls"].setup({
    capabilities = capabilities,
    settings = {
@@ -86,4 +74,8 @@ lspconfig["lua_ls"].setup({
          },
       },
    },
+})
+lspconfig['pyright'].setup({
+   capabilities = capabilities,
+   on_attach = on_attach,
 })
