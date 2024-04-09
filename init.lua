@@ -11,7 +11,6 @@ require('configs.colorscheme')
 require('configs.telescope')
 require('configs.comment')
 require('configs.gitsigns')
--- require('configs.coc')
 require('configs.ufo')
 
 require('configs.nvim-cmp')
