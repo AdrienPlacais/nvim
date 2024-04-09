@@ -9,9 +9,4 @@ conform.setup({
       timeout_ms = 500,
       lsp_fallback = true,
    },
-   formatters = {
-      black = {
-         prepend_args = { "--line-length", "79" },
-      },
-   },
 })
