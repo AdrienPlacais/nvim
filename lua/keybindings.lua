@@ -14,8 +14,8 @@ map('n', '<C-L>', '<C-W><C-L>', { noremap = true, silent = false })
 map('n', '<C-H>', '<C-W><C-H>', { noremap = true, silent = false })
 
 -- Navigate between buffers
-map('n', '<C-]>', '<cmd>bn<CR>', { noremap = true, silent = false })
-map('n', '<C-[>', '<cmd>bp<CR>', { noremap = true, silent = false })
+map('n', '<Tab>', '<cmd>bn<CR>', { noremap = true, silent = false })
+map('n', '<S-Tab>', '<cmd>bp<CR>', { noremap = true, silent = false })
 
 -- Close a buffer but keep window layout
 -- https://stackoverflow.com/questions/1444322/how-can-i-close-a-buffer-without-closing-the-window
