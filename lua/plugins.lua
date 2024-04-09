@@ -1,4 +1,5 @@
-local vim = vim local Plug = vim.fn['plug#']
+local vim = vim
+local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
@@ -34,7 +35,8 @@ Plug('rafamadriz/friendly-snippets')
 Plug('hrsh7th/nvim-cmp')
 
 -- To manage LSP
-Plug('antosha417/nvim-lsp-file-operations')  -- rename files
+Plug('folke/neodev.nvim')                   -- autoconfigure lsp
+Plug('antosha417/nvim-lsp-file-operations') -- rename files
 Plug('hrsh7th/cmp-nvim-lsp')
 -- install LSP with mason
 Plug('williamboman/mason-lspconfig.nvim')
