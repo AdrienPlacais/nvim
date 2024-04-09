@@ -22,6 +22,9 @@ Plug('nvim-telescope/telescope.nvim')
 -- Helper functions, nice interface with telescope
 Plug('stevearc/dressing.nvim')
 
+-- Classic
+Plug('tpope/vim-fugitive')
+
 -- Nice exploration of git branchs
 Plug('lewis6991/gitsigns.nvim')
 
@@ -40,12 +43,9 @@ Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
 Plug('neovim/nvim-lspconfig')
 
--- LSP
--- Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
-
 -- Folding
 Plug('kevinhwang91/promise-async')
-Plug('kevinhwang91/nvim-ufo', { ['branch'] = master, ['run'] = 'yarn install --frozen-lockfile' })
+Plug('kevinhwang91/nvim-ufo', { ['branch'] = 'master', ['run'] = 'yarn install --frozen-lockfile' })
 --
 --
 vim.call('plug#end')
