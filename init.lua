@@ -17,5 +17,7 @@ require('configs.nvim-cmp')
 require('configs.lsp.mason')
 require('configs.lsp.lspconfig')
 
+require('configs.formatting')
+
 -- Configure syntax highlighting
 require('syntax.dat')
