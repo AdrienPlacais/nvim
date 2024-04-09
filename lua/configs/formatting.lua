@@ -11,7 +11,7 @@ conform.setup({
    },
    formatters = {
       black = {
-         prepend_args = { "--line-length", "80" },
+         prepend_args = { "--line-length", "79" },
       },
    },
 })
