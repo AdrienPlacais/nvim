@@ -24,3 +24,5 @@ vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSig
 
 -- Always keep 3 lines above/under cursor
 vim.opt.scrolloff = 3
+
+vim.wo.wrap = false
