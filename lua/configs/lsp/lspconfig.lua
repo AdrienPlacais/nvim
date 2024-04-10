@@ -68,22 +68,20 @@ mason_lspconfig.setup_handlers({
          capabilities = capabilities,
       })
    end,
+   ['lua_ls'] = function()
+      lspconfig["lua_ls"].setup({
+         capabilities = capabilities,
+         settings = {
+            Lua = {
+               -- make the language server recognize "vim" global
+               diagnostics = {
+                  globals = { "vim" },
+               },
+               completion = {
+                  callSnippet = "Replace",
+               },
+            },
+         },
+      })
+   end,
 })
--- lspconfig["lua_ls"].setup({
---    capabilities = capabilities,
---    settings = {
---       Lua = {
---          -- make the language server recognize "vim" global
---          diagnostics = {
---             globals = { "vim" },
---          },
---          completion = {
---             callSnippet = "Replace",
---          },
---       },
---    },
--- })
--- lspconfig['pyright'].setup({
---    capabilities = capabilities,
---    on_attach = on_attach,
--- })
