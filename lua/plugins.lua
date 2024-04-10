@@ -29,6 +29,7 @@ Plug('lewis6991/gitsigns.nvim')
 -- Autocompletion
 Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
+
 Plug('L3MON4D3/LuaSnip', { ['tag'] = 'v2.*' })
 Plug('saadparwaiz1/cmp_luasnip')
 Plug('rafamadriz/friendly-snippets')
