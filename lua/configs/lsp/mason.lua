@@ -21,6 +21,7 @@ mason_lspconfig.setup({
    ensure_installed = {
       "lua_ls",
       "pyright",
+      "taplo"
    },
    automatic_installation = true,
 })
