@@ -10,3 +10,6 @@ conform.setup({
       lsp_fallback = true,
    },
 })
+
+local opt = { noremap = true, silent = false }
+vim.keymap.set('n', '<F6>', ':lua require("conform").format()<CR>', opt)
