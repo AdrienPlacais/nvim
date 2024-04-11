@@ -53,5 +53,7 @@ Plug('stevearc/conform.nvim')
 Plug('kevinhwang91/promise-async')
 Plug('kevinhwang91/nvim-ufo', { ['branch'] = 'master', ['run'] = 'yarn install --frozen-lockfile' })
 
+-- Generate docstrings
+Plug('kkoomen/vim-doge', { ['do'] = ':call doge#install()' })
 
 vim.call('plug#end')

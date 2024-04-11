@@ -3,8 +3,9 @@ local luasnip = require('luasnip')
 
 -- load vscode style snippets
 require('luasnip.loaders.from_vscode').lazy_load()
--- load docstring python
-require('luasnip').filetype_extend("python", { "pydoc" })
+
+-- load docstring python (commented out, use neogen instead)
+-- require('luasnip').filetype_extend("python", { "pydoc" })
 
 cmp.setup({
    snippet = { -- configure how nvim-cmp interacts with other engines
@@ -26,6 +27,15 @@ cmp.setup({
             cmp.confirm({ select = false }) -- <CR> behavior. To go to next node, needs to <C-e> first
          elseif luasnip.locally_jumpable(1) then
             luasnip.jump(1)                 -- Go to next node
+         else
+            fallback()
+         end
+      end, { "i", "s" }),
+      ['<C-k>'] = cmp.mapping(function(fallback)
+         if cmp.visible() then
+            fallback()
+         elseif luasnip.locally_jumpable(-1) then
+            luasnip.jump(-1) -- Go to previous node
          else
             fallback()
          end
