@@ -22,5 +22,7 @@ require('configs.formatting')
 
 require('configs.doge')
 
+require('configs.mini')
+
 -- Configure syntax highlighting
 require('syntax.dat')

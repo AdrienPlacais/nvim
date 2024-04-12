@@ -56,4 +56,7 @@ Plug('kevinhwang91/nvim-ufo', { ['branch'] = 'master', ['run'] = 'yarn install -
 -- Generate docstrings
 Plug('kkoomen/vim-doge', { ['do'] = ':call doge#install()' })
 
+-- Library of plugins
+Plug('echasnovski/mini.nvim')
+
 vim.call('plug#end')
