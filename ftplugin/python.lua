@@ -25,3 +25,9 @@ vim.keymap.set({ 'n' }, '<F5>', '', {
    desc = "Run .py file via Neovim built-in terminal",
    callback = run_curr_python_file
 })
+
+
+local map = vim.api.nvim_set_keymap
+local opt = { noremap = true, silent = false }
+-- Format
+map('n', '<Leader>fc', 'bi:class:`<Esc>ea`<Esc>', opt)
