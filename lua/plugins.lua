@@ -59,4 +59,7 @@ Plug('kkoomen/vim-doge', { ['do'] = ':call doge#install()' })
 -- Library of plugins
 Plug('echasnovski/mini.nvim')
 
+-- Auto add f for f strings in Python when typing {}
+Plug("chrisgrieser/nvim-puppeteer")
+
 vim.call('plug#end')
