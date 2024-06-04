@@ -62,4 +62,7 @@ Plug('echasnovski/mini.nvim')
 -- Auto add f for f strings in Python when typing {}
 Plug("chrisgrieser/nvim-puppeteer")
 
+-- latex
+Plug("lervag/vimtex")
+
 vim.call('plug#end')
