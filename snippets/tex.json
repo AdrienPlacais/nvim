@@ -1,0 +1,11 @@
+{
+   "Frame": {
+      "prefix": "fra",
+      "body": [
+         "\\begin{frame}{$1}",
+         "\t$2",
+         "\\end{frame}"
+      ],
+      "description": "frame"
+   }
+}

@@ -17,12 +17,15 @@ require('configs.ufo')
 require('configs.nvim-cmp')
 require('configs.lsp.mason')
 require('configs.lsp.lspconfig')
+require('configs.snippets')
 
 require('configs.formatting')
 
 require('configs.doge')
 
 require('configs.mini')
+
+require('configs.vimtex')
 
 -- Configure syntax highlighting
 require('syntax.dat')

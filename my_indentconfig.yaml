@@ -1,0 +1,3 @@
+# Configuration file for latexindent
+# Path to this file is given by $HOME/.indentconfig.yaml
+defaultIndent: "\t"

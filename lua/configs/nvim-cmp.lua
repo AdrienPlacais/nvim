@@ -2,7 +2,9 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
 
 -- load vscode style snippets
-require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load(
+   { paths = "/home/placais/.config/nvim/snippets/" }
+)
 
 -- load docstring python (commented out, use neogen instead)
 -- require('luasnip').filetype_extend("python", { "pydoc" })
