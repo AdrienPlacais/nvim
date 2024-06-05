@@ -37,5 +37,15 @@
       "prefix": "em",
       "body": ["\\emph{$1}$2"],
       "description": "emphasis"
+   },
+   "Alerted env": {
+      "prefix": "al",
+      "body": ["\\alert{$1}$2"],
+      "description": "alerted text"
+   },
+   "Todo env": {
+      "prefix": "to",
+      "body": ["\\todo{$1}$2"],
+      "description": "todo environment"
    }
 }
