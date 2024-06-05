@@ -17,6 +17,7 @@ require('configs.ufo')
 require('configs.nvim-cmp')
 require('configs.lsp.mason')
 require('configs.lsp.lspconfig')
+require 'configs.lsp.ltex_setup'
 require('configs.snippets')
 
 require('configs.formatting')
