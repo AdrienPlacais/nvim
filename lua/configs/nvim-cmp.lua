@@ -1,13 +1,16 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
--- load vscode style snippets
+-- Load vscode style snippets
 require('luasnip.loaders.from_vscode').lazy_load(
    { paths = "/home/placais/.config/nvim/snippets/" }
 )
 
--- load docstring python (commented out, use neogen instead)
--- require('luasnip').filetype_extend("python", { "pydoc" })
+-- Clear old nodes, cf https://www.reddit.com/r/neovim/comments/yiimig/cmp_luasnip_jump_points_strange_behaviour/
+luasnip.config.set_config({
+   region_check_events = 'InsertEnter',
+   delete_check_events = 'InsertLeave'
+})
 
 cmp.setup({
    snippet = { -- configure how nvim-cmp interacts with other engines
@@ -27,8 +30,8 @@ cmp.setup({
 
       -- Navigate snippets or confirm completion
       ['<C-j>'] = cmp.mapping(function(fallback)
-         if luasnip.jumpable(1) then
-            luasnip.jump(1)
+         if luasnip.expand_or_jumpable(1) then
+            luasnip.expand_or_jump(1)
          elseif cmp.visible() then
             cmp.confirm({ select = false })
          else
@@ -36,8 +39,8 @@ cmp.setup({
          end
       end, { "i", "s" }),
       ['<C-k>'] = cmp.mapping(function(fallback)
-         if luasnip.jumpable(-1) then
-            luasnip.jump(-1)
+         if luasnip.expand_or_jumpable(-1) then
+            luasnip.expand_or_jump(-1)
          else
             fallback()
          end
