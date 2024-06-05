@@ -27,5 +27,15 @@
       "prefix": "enu",
       "body": ["\\begin{enumerate}", "   \\item $1", "\\end{enumerate}"],
       "description": "enumerate"
+   },
+   "Inline math environment": {
+      "prefix": "$$",
+      "body": ["\\( $1 \\) $2"],
+      "description": "inline math"
+   },
+   "Emphasis env": {
+      "prefix": "em",
+      "body": ["\\emph{$1}$2"],
+      "description": "emphasis"
    }
 }
