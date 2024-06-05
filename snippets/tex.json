@@ -3,9 +3,24 @@
       "prefix": "fra",
       "body": [
          "\\begin{frame}{$1}",
-         "\t$2",
+         "   $2",
          "\\end{frame}"
       ],
       "description": "frame"
+   },
+   "Section": {
+      "prefix": "sec",
+      "body": ["\\section{$1}", "   $2"],
+      "description": "section"
+   },
+   "Sub-Section": {
+      "prefix": "ssec",
+      "body": ["\\subsection{$1}", "   $2"],
+      "description": "subsection"
+   },
+   "Itemize": {
+      "prefix": "it",
+      "body": ["\\begin{itemize}", "   \\item $1", "\\end{itemize}"],
+      "description": "itemize"
    }
 }
