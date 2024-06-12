@@ -9,14 +9,25 @@ local function insert_item()
 
    if string.match(line, "^%s*\\item") then
       -- If the current line starts with \item, insert a new \item on the next line
-      vim.api.nvim_set_current_line(line .. "\n\\item ")
-      vim.api.nvim_win_set_cursor(0, { pos[1] + 1, 7 }) -- Position cursor after \item
+      vim.api.nvim_buf_set_lines(0, pos[1], pos[1], false, { "\\item " })
+      vim.api.nvim_win_set_cursor(0, { pos[1] + 1, 6 }) -- Position cursor after \item
    else
       -- Otherwise, just insert a newline and position the cursor at the correct location
-      vim.api.nvim_set_current_line(line:sub(1, pos[2]) .. "\n" .. line:sub(pos[2] + 1))
-      vim.api.nvim_win_set_cursor(0, { pos[1] + 1, pos[2] + 1 })
+      vim.api.nvim_buf_set_lines(0, pos[1], pos[1], false, { "" })
+      vim.api.nvim_win_set_cursor(0, { pos[1] + 1, 0 })
    end
 end
+vim.g.vimtex_compiler_latexmk = {
+   build_dir = 'build',
+   options = {
+      '-pdf',
+      '-shell-escape',
+      '-verbose',
+      '-file-line-error',
+      '-synctex=1',
+      '-interaction=nonstopmode',
+   },
+}
 
 -- Map Shift+CR in LaTeX buffers
 vim.api.nvim_exec([[
