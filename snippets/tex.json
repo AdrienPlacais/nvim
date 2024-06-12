@@ -47,5 +47,37 @@
       "prefix": "to",
       "body": ["\\todo{$1}$2"],
       "description": "todo environment"
+   },
+   "Subfigure": {
+      "prefix": "subfig",
+      "body": [
+         "\\begin{figure}[hbtp]",
+         "\\begin{subfigure}[t]{.49\\textwidth}",
+         "\\includegraphics[width=\\textwidth]{$1}",
+         "\\caption{$2}",
+         "\\end{subfigure}",
+         "\\hfill",
+         "\\begin{subfigure}[t]{.49\\textwidth}",
+         "\\includegraphics[width=\\textwidth]{$3}",
+         "\\caption{$4}",
+         "\\end{subfigure}",
+         "\\caption{%",
+         "$5",
+         "}",
+         "\\end{figure}",
+         "\\vspace{-\\baselineskip}",
+         "$6"
+      ],
+      "description": "subfig env"
+   },
+   "si": {
+     "prefix": "si",
+     "body": ["\\si{$1}$2"],
+     "description": "si command"
+   },
+   "SI": {
+     "prefix": "SI",
+     "body": ["\\SI{$1}{$2}$3"],
+     "description": "SI command"
    }
 }
