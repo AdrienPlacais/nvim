@@ -19,16 +19,23 @@ mason.setup({
 mason_lspconfig.setup({
    -- list of servers for mason to install
    ensure_installed = {
+      "ltex",
       "lua_ls",
       "marksman",
       "pyright",
-      "taplo"
+      "taplo",
+      "texlab"
    },
    automatic_installation = true,
 })
 mason_tool_installer.setup({
    ensure_installed = {
-      "isort",
+      -- Formatters
       "black",
+      "isort",
+      "latexindent",
+      "prettier",
+      -- Linters
+      "rstcheck",
    },
 })
