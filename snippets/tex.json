@@ -48,6 +48,19 @@
       "body": ["\\todo{$1}$2"],
       "description": "todo environment"
    },
+   "Figure": {
+      "prefix": "fig",
+      "body": [
+         "\\begin{figure}[hbtp]",
+         "\\centering",
+         "\\includegraphics[${1:width=\\textwidth}]{${2:example-image-a}}",
+         "\\caption{$3}",
+         "\\end{figure}",
+         "\\vspace{-\\baselineskip}",
+         "$4"
+      ],
+      "description": "fig env"
+   },
    "Subfigure": {
       "prefix": "subfig",
       "body": [
@@ -79,5 +92,25 @@
      "prefix": "SI",
      "body": ["\\SI{$1}{$2}$3"],
      "description": "SI command"
+   },
+   "texttt": {
+     "prefix": "ttt",
+     "body": ["\\texttt{$1}$2"],
+     "description": "monofont env"
+   },
+   "columns": {
+      "prefix": "col",
+      "body": [
+         "\\begin{columns}[${1:t}]",
+         "\\begin{column}{${2:.50\\textwidth}}",
+         "$3",
+         "\\end{column}",
+         "\\begin{column}{${4:.50\\textwidth}}",
+         "$5",
+         "\\end{column}",
+         "\\end{columns}",
+         "$6"
+      ],
+      "description": "columns env"
    }
 }
