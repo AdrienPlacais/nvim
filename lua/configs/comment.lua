@@ -1,5 +1,9 @@
 require('Comment').setup()
-local ft = require('Comment.ft')
 
 -- Define comment for TraceWin .dat
-ft.set('dat', ';s')
+vim.api.nvim_exec([[
+augroup CustomCommentStrings
+    autocmd!
+    autocmd FileType * lua require('Comment.ft').set('dat', '; %s')
+augroup END
+]], false)
