@@ -8,4 +8,7 @@ Configuration files for NeoVim 0.9.x.
 3. Install `Plug`: https://github.com/junegunn/vim-plug
  - use the provided one-liner, it is easier ;)
 4. Launch NeoVim and run `:PlugInstall`
-5. The LPS should be automatically downloaded. If not, maybe NeoVim does not know where your Python distribution is. You can test it by running `:checkhealth provider`.
+5. The LSPs should be automatically downloaded. If not, maybe NeoVim does not know where your Python distribution is. You can test it by running `:checkhealth provider`.
+
+## To do
+- [ ] Automatic installation of `treesitter` parsers. For now, you need to manually `:TSInstall python`, `:TSInstall lua`, etc.
