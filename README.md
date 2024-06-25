@@ -12,3 +12,7 @@ Configuration files for NeoVim 0.9.x.
 
 ## To do
 - [ ] Automatic installation of `treesitter` parsers. For now, you need to manually `:TSInstall python`, `:TSInstall lua`, etc.
+
+## Troubleshooting
+- If `latexindent` is now working, check that a `.indentconfig.yaml` in you `$HOME` directory points towards the `my_indentconfig.yaml` file of this repo.
+- Check that `ls /usr/lib64/libcrypt.so.1` exists.
